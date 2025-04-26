@@ -1,0 +1,98 @@
+/* Base styles for all screen sizes */
+.wallpaper-container {
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .wallpaper-image {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .wallpaper-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: 'Palatino';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    margin: 0;
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .wallpaper-container {
+      padding: 10px 40px;
+    }
+    
+    .wallpaper-image {
+      height: 400px;
+    }
+    
+    .wallpaper-title {
+      font-size: 32px;
+      line-height: 1.3;
+      width: 80%;
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .wallpaper-container {
+      padding: 10px 60px;
+    }
+    
+    .wallpaper-image {
+      height: 500px;
+    }
+    
+    .wallpaper-title {
+      font-size: 36px;
+      width: 70%;
+    }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .wallpaper-container {
+      padding: 10px 80px;
+    }
+    
+    .wallpaper-image {
+      height: 600px;
+    }
+    
+    .wallpaper-title {
+      font-size: 40px;
+      line-height: 60px;
+      width: 600px;
+    }
+  }
+  
+  /* Small devices (landscape phones, 576px and below) */
+  @media (max-width: 576px) {
+    .wallpaper-container {
+      padding: 10px 15px;
+    }
+    
+    .wallpaper-title {
+      font-size: 24px;
+      line-height: 1.3;
+      letter-spacing: normal;
+    }
+  }

@@ -1,0 +1,111 @@
+.testimonial-container {
+    background-color: rgb(246, 250, 248);
+    margin-top: 10%;
+    padding: 5% 10%;
+}
+
+.testimonial-header {
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Palatino';
+}
+
+.testimonial-header h1 {
+    font-size: clamp(28px, 4vw, 36px);
+    margin-bottom: 30px;
+    font-family: 'Palatino';
+    font-weight: 600;
+}
+
+.testimonial-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-top: 5%;
+    font-family: 'Open Sans';
+}
+
+.testimonial-photo {
+    border-radius: 50%;
+    height: clamp(150px, 25vw, 250px);
+    width: clamp(150px, 25vw, 250px);
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.testimonial-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 700px;
+    font-family: 'Open Sans';
+}
+
+.testimonial-quote {
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Open Sans';
+}
+
+.testimonial-name {
+    font-size: clamp(18px, 2.2vw, 22px);
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-family: 'Palatino';
+}
+
+.testimonial-role {
+    font-size: clamp(14px, 1.8vw, 16px);
+    color: #555;
+    font-family: 'Open Sans';
+}
+
+.testimonial-dots {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 6px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonial-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .testimonial-text {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-container {
+        padding: 10% 5%;
+    }
+
+    .testimonial-photo {
+        height: 180px;
+        width: 180px;
+    }
+
+    .testimonial-quote {
+        font-size: 15px;
+    }
+}

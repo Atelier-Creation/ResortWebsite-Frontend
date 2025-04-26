@@ -1,0 +1,46 @@
+/* PaymentSuccess.css */
+.payment-success-page {
+    text-align: center;
+    margin:30px;
+    background-color: #f8f8f8;
+  }
+  
+  .success-content {
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Palatino';
+    color: #4CAF50; /* Success green */
+
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Open Sans';
+  }
+  
+  .payment-success-page .step-wrapper {
+    margin-top: 30px;
+  }
+  
+  .payment-success-page .step-wrapper .step {
+    background-color: #4CAF50; /* Green for completed steps */
+    color: white;
+  }
+  
+  .payment-success-page .step-wrapper .line {
+    background-color: #4CAF50; /* Green line for connection */
+  }
+  
+  .payment-success-page .step-wrapper .step.active {
+    background-color: #4CAF50; /* Green when step is active */
+  }
+  

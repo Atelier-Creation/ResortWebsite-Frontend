@@ -1,0 +1,122 @@
+.Amenities {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10%;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  padding: 0 5%;
+}
+
+.Amenities-left-side {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  padding-top: 50px;
+}
+
+.amenities-label {
+  color: rgb(1, 1, 92);
+  font-family: 'Palatino';
+  margin-bottom: 15px;
+}
+
+.amenities-title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-family: 'Palatino';
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.amenities-description {
+  width: 100%;
+  max-width: 500px;
+  font-size: clamp(16px, 2vw, 19px);
+  font-family: 'Open Sans';
+  line-height: 1.6;
+}
+
+.Amenities-right-side {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.amenity-logo {
+  border: 1px solid rgb(223, 220, 220);
+  height: auto;
+  min-height: 100px;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20%;
+  color: rgb(1, 1, 92);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.amenity-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 86, 210, 0.2);
+}
+
+.amenity-label {
+  font-family: 'Open Sans';
+  margin-top: 15px;
+  text-align: center;
+  font-size: clamp(14px, 1.5vw, 16px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .Amenities {
+      gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Amenities {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 15%;
+  }
+
+  .Amenities-left-side {
+      padding-top: 30px;
+      text-align: center;
+  }
+
+  .amenities-description {
+      margin: 0 auto;
+  }
+
+  .Amenities-right-side {
+      margin-top: 30px;
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Amenities-right-side {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+
+  .amenity-logo {
+      padding: 15%;
+  }
+
+  .amenities-title {
+      font-size: 28px;
+  }
+
+  .amenities-description {
+      font-size: 16px;
+  }
+}

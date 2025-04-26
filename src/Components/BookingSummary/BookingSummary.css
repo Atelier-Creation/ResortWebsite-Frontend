@@ -1,0 +1,53 @@
+/* Add these styles to your BookingSummary.css or relevant CSS file */
+
+.booking-page {
+  margin-top: 40px;
+  background-color: #f7f9fa;
+}
+
+.booking-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left-section {
+  flex: 2;
+}
+
+.right-section {
+  flex: 1;
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+  .booking-content {
+    flex-direction: column;
+  }
+  
+  /* This will make the right section (RoomSummary) appear first in mobile */
+  .booking-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Default order for desktop is maintained */
+  .left-section {
+    order: 1;
+  }
+  
+  .right-section {
+    order: 2;
+  }
+  
+  /* For mobile, we change the order */
+  @media (max-width: 768px) {
+    .left-section {
+      order: 2;
+    }
+    
+    .right-section {
+      order: 1;
+    }
+  }
+}

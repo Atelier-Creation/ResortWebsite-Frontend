@@ -1,0 +1,133 @@
+/* Base styles for all devices */
+.faq-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px; /* Reduced padding for mobile */
+}
+
+.faq-box {
+  background-color: white;
+  padding: 20px; /* Reduced padding for mobile */
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px; /* Maximum width maintained */
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+  margin: 0 10px; /* Added margin for small screens */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.faq-heading {
+  text-align: center;
+  font-size: 24px; /* Slightly smaller on mobile */
+  font-family: 'Palatino';
+  font-weight: 700;
+  margin-bottom: 20px; /* Reduced margin */
+  color: rgb(1, 1, 92);
+}
+
+.faq-item {
+  margin-bottom: 8px; /* Reduced margin */
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px 0; /* Reduced padding */
+  font-weight: 600;
+  font-family: 'Open Sans';
+  color: #333;
+  font-size: 15px; /* Slightly smaller text */
+  transition: transform 0.3s ease;
+}
+
+.faq-icon-text {
+  display: flex;
+  font-family: 'Open Sans';
+  align-items: center;
+  gap: 8px; /* Reduced gap */
+}
+
+.info-icon {
+  color: #888;
+  font-size: 16px; /* Slightly smaller icon */
+}
+
+.faq-answer {
+  padding: 0 0 8px 28px; /* Adjusted padding */
+  font-family: 'Open Sans';
+  color: #555;
+  font-size: 14px; /* Slightly smaller text */
+  animation: fadeInAnswer 0.5s forwards;
+}
+
+.view-more-btn {
+  margin-top: 15px; /* Reduced margin */
+  padding: 8px 20px; /* Adjusted padding */
+  font-size: 14px; /* Slightly smaller text */
+  font-family: 'Open Sans';
+  color: white;
+  border-radius: 20px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .faq-wrapper {
+    padding: 30px 20px;
+  }
+
+  .faq-box {
+    padding: 25px;
+  }
+
+  .faq-heading {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+    padding: 14px 0;
+  }
+
+  .faq-answer {
+    font-size: 15px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .faq-wrapper {
+    padding: 40px 20px;
+  }
+
+  .faq-box {
+    padding: 30px;
+  }
+
+  .faq-heading {
+    font-size: 28px;
+  }
+
+  /* All other styles remain as in your original design */
+  /* No need to redefine them as they'll inherit from base */
+}
+
+/* Hover effects only for devices that support hover */
+@media (hover: hover) {
+  .faq-question:hover {
+    transform: scale(1.03);
+  }
+
+  .view-more-btn:hover {
+    background-color: #003080;
+    transform: scale(1.05);
+  }
+}

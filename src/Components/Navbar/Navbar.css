@@ -1,0 +1,206 @@
+/* Navbar Base Styles */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Logo Styles */
+.logo-image {
+  cursor: pointer;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar State Styles */
+.transparent-navbar {
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sticky-navbar {
+  background-color: white;
+  color: black;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 50px;
+}
+
+.nav-links a {
+  margin: 0;
+  cursor: pointer;
+  font-weight: 500;
+  color: inherit;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: blue;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: blue;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Book Room Button */
+.bookRoom {
+  background-color: rgb(1, 1, 92);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.bookRoom:hover {
+  transform: scale(1.05);
+  background-color: darkblue;
+  box-shadow: 0 4px 8px rgba(0, 0, 139, 0.2);
+}
+
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: inherit;
+  margin-left: 20px;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: inherit;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 999;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu a {
+  padding: 12px 0;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: blue;
+}
+
+/* Mobile Nav Container */
+.mobile-nav-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .Navbar {
+    padding: 20px 5%;
+  }
+  
+  .nav-links {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .mobile-menu-icon {
+    display: block;
+  }
+  
+  .bookRoom {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  
+  .mobile-nav-container {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 480px) {
+  .Navbar {
+    padding: 15px 5%;
+  }
+  
+  .logo-image {
+    height: 30px;
+  }
+  
+  .bookRoom {
+    padding: 8px 15px;
+    font-size: 10px;
+    margin-right: 15px;
+  }
+  
+  .mobile-menu-icon {
+    margin-left: 15px;
+    font-size: 20px;
+  }
+  
+  .mobile-menu {
+    padding: 15px;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}

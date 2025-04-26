@@ -1,0 +1,255 @@
+/* Base styles for all devices */
+.rooms-list-container {
+  padding: 20px;
+  border: 1px solid rgb(212, 210, 210);
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.room-card {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.room-left,
+.room-center,
+.room-right {
+  width: 100%;
+  
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.photo-count {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 5px;
+
+}
+
+.room-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #444;
+  font-family: 'Open Sans';
+}
+
+.room-icons p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Open Sans';
+}
+
+.features p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 8px 0;
+  font-family: 'Open Sans';
+}
+
+.check-icon {
+  color: green;
+}
+
+.read-more,
+.view-more {
+  color: blue;
+  cursor: pointer;
+  font-family: 'Open Sans';
+}
+
+.discount-badge {
+  background: rgb(1, 1, 92);
+  color: white;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+  font-family: 'Open Sans';
+}
+
+.strike {
+  text-decoration: line-through;
+  color: grey;
+  font-size: 14px;
+  font-family: 'Open Sans';
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
+  border-radius: 20px;
+  width: 175px;
+  margin: 0 auto;
+}
+
+.quantity-controls button {
+  height: 40px;
+  width: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Open Sans';
+}
+
+.quantity-input {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  background-color: rgb(220, 220, 220);
+  margin: 0 5px;
+}
+
+.warning {
+  color: red;
+  font-weight: bold;
+  margin: 10px 0;
+  font-family: 'Open Sans';
+}
+
+.book-btn {
+  background-color: rgb(1, 1, 92);
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Open Sans';
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .room-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .room-left {
+    width: 100%;
+    border-right: none;
+  }
+  
+  .room-center {
+    width: 60%;
+    border-right: none;
+  }
+  
+  .room-right {
+    width: 35%;
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  .quantity-controls {
+    margin: 0;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .rooms-list-container {
+    margin: 50px 80px;
+  }
+  
+  .room-card {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  .room-left {
+    width: 25%;
+    border-right: 2px solid #ddd;
+  }
+  
+  .room-center {
+    width: 30%;
+    border-right: 2px solid #ddd;
+    padding: 0 20px;
+  }
+  
+  .room-right {
+    width: 25%;
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  .carousel-img {
+    height: 300px;
+  }
+  
+  .quantity-controls {
+    margin: 0 auto;
+  }
+}
+
+/* Hover effects for devices that support hover */
+@media (hover: hover) {
+  .room-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .room-center h3:hover {
+    color: #007BFF;
+  }
+  
+  .read-more:hover,
+  .view-more:hover {
+    color: #0056d2;
+  }
+  
+  .book-btn:hover {
+    background-color: #0056d2;
+  }
+  
+  .quantity-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .quantity-controls button:hover {
+    background-color: #f0f0f0;
+  }
+}

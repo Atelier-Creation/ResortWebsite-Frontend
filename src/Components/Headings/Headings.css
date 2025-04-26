@@ -1,0 +1,66 @@
+.headings {
+    height: fit-content;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px; /* Added padding for better spacing on mobile */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.headings h1 {
+    font-size: 60px;
+    margin: 0 0 15px 0; /* Added margin for better spacing */
+    line-height: 1.2; /* Improved line height for readability */
+    transition: font-size 0.3s ease; /* Smooth transition for font size changes */
+}
+
+.headings p {
+    font-size: 17px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0; /* Reset default margins */
+    line-height: 1.6; /* Improved line height for readability */
+    max-width: 800px; /* Limit paragraph width for better readability */
+    margin-left: auto; /* Center the paragraph */
+    margin-right: auto; /* Center the paragraph */
+    transition: font-size 0.3s ease; /* Smooth transition for font size changes */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .headings h1 {
+        font-size: 50px;
+    }
+    
+    .headings p {
+        font-size: 16px;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headings h1 {
+        font-size: 40px;
+    }
+    
+    .headings p {
+        font-size: 15px;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .headings h1 {
+        font-size: 32px;
+    }
+    
+    .headings p {
+        font-size: 14px;
+        max-width: 100%;
+        padding: 0 15px; /* Add side padding on very small screens */
+    }
+    
+    .headings {
+        padding: 15px;
+    }
+}

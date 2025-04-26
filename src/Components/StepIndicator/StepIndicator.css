@@ -1,0 +1,48 @@
+/* Step Wrapper with Animation */
+.step-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background: white;
+  margin-bottom: 80px;
+  animation: fadeInUp 0.5s forwards; /* Fade-in animation */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+}
+
+.step.active {
+  background-color: #80bd01;
+}
+
+.line {
+  width: 100px;
+  height: 3px;
+  background-color: #ccc;
+}
+
+.line.active {
+  background-color: #80bd01;
+}

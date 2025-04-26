@@ -1,0 +1,111 @@
+/* Original styles (for big screens) */
+input {
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  margin: 10px;
+  border: 1px solid rgb(222, 221, 221);
+  padding: 5px 10px;
+  font-family: 'Open Sans';
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 14px rgba(0, 86, 210, 0.2);
+}
+
+textarea {
+  width: 650px;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid rgb(222, 221, 221);
+  padding: 5px 10px;
+  margin: 10px;
+  font-family: 'Open Sans';
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 14px rgba(0, 86, 210, 0.2);
+}
+
+.form-submit-btn {
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  border: 1px solid rgb(1, 1, 92);
+  color: rgb(1, 1, 92);
+  background-color: white;
+  font-family: 'Open Sans';
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-submit-btn:hover {
+  transform: scale(1.05);
+  background-color: #0056d2;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 86, 210, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  textarea {
+      width: 550px;
+  }
+}
+
+@media (max-width: 992px) {
+  input {
+      width: 250px;
+  }
+  
+  textarea {
+      width: 90%;
+      max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  input {
+      width: 80%;
+      max-width: 300px;
+  }
+  
+  textarea {
+      height: 180px;
+  }
+  
+  .form-submit-btn {
+      width: 130px;
+  }
+}
+
+@media (max-width: 576px) {
+  input {
+      height: 45px;
+      width: 90%;
+  }
+  
+  textarea {
+      height: 150px;
+      width: 90%;
+  }
+  
+  .form-submit-btn {
+      width: 120px;
+      height: 45px;
+  }
+}
+
+@media (max-width: 400px) {
+  input, textarea {
+      margin: 8px;
+      padding: 4px 8px;
+  }
+  
+  .form-submit-btn {
+      width: 100px;
+  }
+}
